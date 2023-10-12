@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+</head>
+<body>
+    
+    <form action="processar_formulario.php" method="post">
+        <fieldset class="container">
+            <legend>Informações Pessoais</legend>
+            
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu Nome" required><br><br>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" required><br><br>
+
+            <label for="telefone">Telefone:</label>
+            <input type="text" id="telefone" name="telefone" placeholder="11-9999-9999" required><br><br>
+
+            <label for="genero">Gênero:</label>
+            <input type="radio" id="genero_masculino" name="genero" value="Masculino">
+            <label for="genero_masculino">Masculino</label>
+            <input type="radio" id="genero_feminino" name="genero" value="Feminino">
+            <label for="genero_feminino">Feminino</label>
+            <input type="radio" id="genero_outro" name="genero" value="Outro">
+            <label for="genero_outro">Outro</label><br><br>
+
+            <label for="data_nascimento">Data de Nascimento:</label>
+            <input type="date" id="data_nascimento" name="data_nascimento" required><br><br>
+
+            <label for="horario_atendimento">Horário de Atendimento:</label>
+            <input type="time" id="horario_atendimento" name="horario_atendimento" required><br><br>
+
+           <h3><b>Hobbies:</b></h3>
+            <label for="hobby_esporte">Esporte</label>
+            <input type="checkbox" id="hobby_esporte" name="hobbies[]" value="esporte"><br><br>
+
+            <label for="hobby_leitura">Leitura</label>
+            <input type="checkbox" id="hobby_leitura" name="hobbies[]" value="leitura"><br><br>
+
+            <label for="hobby_musica">Música</label>
+            <input type="checkbox" id="hobby_musica" name="hobbies[]" value="musica"><br><br>
+
+            <label for="hobby_viagem">Viagem</label>
+            <input type="checkbox" id="hobby_viagem" name="hobbies[]" value="viagem"><br><br>
+    
+
+            <label for="cor_favorita">Cor Favorita:</label>
+            <select id="cor_favorita" name="cor_favorita">
+                <option value="vermelho">Vermelho</option>
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="amarelo">Amarelo</option>
+                <option value="roxo">Roxo</option>
+            </select><br><br>
+        </fieldset>
+        <style>
+         .container{
+            width: 300px;
+            
+            
+         }
+            .botao-enviar{
+                background-color: green;
+                border-radius: 5px;
+                border: none;
+                width: 160px;
+                height: 30px;
+                cursor: pointer;
+                margin-top: 10px;
+                transition: opacity 0.3;
+
+            }
+            .botao-limpar{
+                background-color: red;
+                border-radius: 5px;
+                border: none;
+                width: 160px;
+                height: 30px;
+                cursor: pointer; 
+                margin-top: 10px;
+                transition: opacity 0.3;
+            }
+            .botao-enviar:hover{
+                opacity: 0.7;
+            }
+            .botao-limpar:hover{
+                opacity: 0.7;
+            }
+
+        </style>
+        
+        <input class=  "botao-enviar"type="submit" value="Enviar">
+        <input class="botao-limpar" type="reset" value="Limpar">
+
+    </form>
+</body>
+</html>
